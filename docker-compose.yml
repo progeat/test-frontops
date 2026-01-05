@@ -19,10 +19,10 @@ services:
     volumes:
       - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
       - ./static:/static
-      - ./cerbot/www:/var/www/cerbot
-      - ./cerbot/data:/etc/letsnecrypt
-  cerbot:
-    image: cerbot/cerbot
+      - ./certbot/www:/var/www/certbot
+      - ./certbot/data:/etc/letsnecrypt
+  certbot:
+    image: certbot/certbot
     volumes:
-      - ./cerbot/www:/var/www/cerbot
-      - ./cerbot/data:/etc/letsnecrypt
+      - ./certbot/www:/var/www/certbot
+      - ./certbot/data:/etc/letsnecrypt
